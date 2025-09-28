@@ -18,7 +18,7 @@ body {
       font-size: 2rem;
     }
 
-    /* Hero Section */
+    
     .hero {
       background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60ESigzhGqn4I8WauWODhfugXr-A1b9qGow&s') no-repeat center/cover;
       color: rgb(10, 10, 10);
@@ -92,7 +92,7 @@ body {
       font-weight: bold;
     }
 
-    /* Footer */
+    
     footer {
       background: #c0392b;
       color: white;
@@ -100,3 +100,4 @@ body {
       padding: 1rem;
       margin-top: 2rem;
     }
+

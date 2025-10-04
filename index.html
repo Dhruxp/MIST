@@ -3,68 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Foodie's Paradise</title>
+</head>
+<body class="m-0 font-sans bg-gray-50 text-gray-800">
 
-<body>
+  <!-- Navbar added -->
+  <header class="bg-red-700 text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      
+      <h1 class="text-2xl font-bold">Foodie's Paradise</h1>
 
-  <header>
-    <h1>Foodie's Paradise</h1>
+      <nav class="hidden md:flex space-x-6 text-lg font-medium">
+        <a href="#" class="hover:text-gray-200 transition">Home</a>
+        <a href="#menu" class="hover:text-gray-200 transition">Menu</a>
+        <a href="#about" class="hover:text-gray-200 transition">About</a>
+        <a href="#contact" class="hover:text-gray-200 transition">Contact</a>
+      </nav>
+
+      <!-- Menu added -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+      <a href="#" class="block hover:text-gray-200">Home</a>
+      <a href="#menu" class="block hover:text-gray-200">Menu</a>
+      <a href="#about" class="block hover:text-gray-200">About</a>
+      <a href="#contact" class="block hover:text-gray-200">Contact</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Welcome to Foodie's Paradise</h2>
-    <p>Delicious meals, crafted with love <3 </p>
+  <section class="hero bg-center bg-cover text-black text-center py-24 px-6"
+    style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60ESigzhGqn4I8WauWODhfugXr-A1b9qGow&s');">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Foodie's Paradise</h2>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto">Delicious meals, crafted with love ❤️</p>
   </section>
 
-  <section class="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-grid">
-      <!-- Card 1 -->
-      <div class="card">
-        <img src="STUDY/pizza.jpg" alt="Pizza">
-        <div class="card-body">
-          <h3>Margherita Pizza</h3>
-          <p>Classic delight with fresh mozzarella & basil.</p>
-          <p class="price">₹350</p>
+  <section id="menu" class="menu py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold text-red-700 mb-12">Our Menu</h2>
+
+    <div class="menu-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      
+      <!-- Card -->
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/pizza.jpg" alt="Pizza" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Margherita Pizza</h3>
+          <p class="text-sm text-gray-600 mb-2">Classic delight with fresh mozzarella & basil.</p>
+          <p class="price text-red-700 font-bold">₹350</p>
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="card">
-        <img src="STUDY/burg.jpg" alt="Burger">
-        <div class="card-body">
-          <h3>Cheese Burger</h3>
-          <p>Juicy beef patty with melted cheddar cheese.</p>
-          <p class="price">₹250</p>
+      <!-- Card -->
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/burg.jpg" alt="Burger" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Cheese Burger</h3>
+          <p class="text-sm text-gray-600 mb-2">Juicy beef patty with melted cheddar cheese.</p>
+          <p class="price text-red-700 font-bold">₹250</p>
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="card">
-        <img src="STUDY/pasta.jpg" alt="Pasta">
-        <div class="card-body">
-          <h3>Italian Pasta</h3>
-          <p>Rich tomato sauce with parmesan topping.</p>
-          <p class="price">₹300</p>
+      <!-- Card -->
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/pasta.jpg" alt="Pasta" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Italian Pasta</h3>
+          <p class="text-sm text-gray-600 mb-2">Rich tomato sauce with parmesan topping.</p>
+          <p class="price text-red-700 font-bold">₹300</p>
         </div>
       </div>
 
-      <!-- Card 4 -->
-      <div class="card">
-        <img src="STUDY/clc.jpg" alt="Choco lave cake">
-        <div class="card-body">
-          <h3>Choco Lava Ice Cream</h3>
-          <p>Creamy chocolate with molten lava center.</p>
-          <p class="price">₹180</p>
+      <!-- Card -->
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/clc.jpg" alt="Choco Lava Cake" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Choco Lava Ice Cream</h3>
+          <p class="text-sm text-gray-600 mb-2">Creamy chocolate with molten lava center.</p>
+          <p class="price text-red-700 font-bold">₹180</p>
         </div>
       </div>
+
     </div>
   </section>
 
-  <footer>
-    <p> Dhruv Prakash | All Rights Reserved</p>
+  <footer class="bg-red-700 text-white text-center py-4 mt-10">
+    <p class="text-sm">Dhruv Prakash | All Rights Reserved</p>
   </footer>
+
+  <!-- JS part added -->
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
 
 </body>
 </html>
+

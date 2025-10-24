@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Foodie's Paradise</title>
+</head>
+
+<body class="m-0 font-sans bg-gray-50 text-gray-800 transition-colors duration-500">
+
+  <!-- Header -->
+  <header class="bg-red-700 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+
+      <!--Title -->
+      <h1 class="text-2xl font-bold cursor-pointer">Foodie's Paradise</h1>
+
+      <nav class="hidden md:flex space-x-6 text-lg font-medium">
+        <a href="#" class="hover:text-gray-200 transition scroll-link">Home</a>
+        <a href="#menu" class="hover:text-gray-200 transition scroll-link">Menu</a>
+        <a href="#about" class="hover:text-gray-200 transition scroll-link">About</a>
+        <a href="#contact" class="hover:text-gray-200 transition scroll-link">Contact</a>
+      </nav>
+
+      <!--Side Icons -->
+      <div class="flex items-center space-x-4">
+        <button id="cart-btn" class="relative">
+          🛒
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-white text-red-700 rounded-full px-2 text-sm font-bold">0</span>
+        </button>
+        <button id="theme-toggle" class="text-white text-xl">🌙</button>
+
+        <!-- Mobile Menu -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+      <a href="#" class="block hover:text-gray-200 scroll-link">Home</a>
+      <a href="#menu" class="block hover:text-gray-200 scroll-link">Menu</a>
+      <a href="#about" class="block hover:text-gray-200 scroll-link">About</a>
+      <a href="#contact" class="block hover:text-gray-200 scroll-link">Contact</a>
+    </div>
+  </header>
+
+  <section class="hero bg-center bg-cover text-black text-center py-24 px-6"
+    style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60ESigzhGqn4I8WauWODhfugXr-A1b9qGow&s');">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Foodie's Paradise</h2>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto">Delicious meals, crafted with love ❤️</p>
+  </section>
+
+  <section id="menu" class="menu py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold text-red-700 mb-12">Our Menu</h2>
+
+    <div class="menu-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/pizza.jpg" alt="Pizza" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Margherita Pizza</h3>
+          <p class="text-sm text-gray-600 mb-2">Classic delight with fresh mozzarella & basil.</p>
+          <p class="price text-red-700 font-bold mb-3">₹350</p>
+          <button class="add-cart bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/burg.jpg" alt="Burger" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Cheese Burger</h3>
+          <p class="text-sm text-gray-600 mb-2">Juicy beef patty with melted cheddar cheese.</p>
+          <p class="price text-red-700 font-bold mb-3">₹250</p>
+          <button class="add-cart bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/pasta.jpg" alt="Pasta" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Italian Pasta</h3>
+          <p class="text-sm text-gray-600 mb-2">Rich tomato sauce with parmesan topping.</p>
+          <p class="price text-red-700 font-bold mb-3">₹300</p>
+          <button class="add-cart bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer">
+        <img src="STUDY/clc.jpg" alt="Choco Lava Cake" class="w-full h-48 object-cover">
+        <div class="card-body p-4 text-left">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Choco Lava Ice Cream</h3>
+          <p class="text-sm text-gray-600 mb-2">Creamy chocolate with molten lava center.</p>
+          <p class="price text-red-700 font-bold mb-3">₹180</p>
+          <button class="add-cart bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scroll to Top feature -->
+  <button id="scroll-top" class="hidden fixed bottom-5 right-5 bg-red-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-800 transition">⬆</button>
+
+  <footer class="bg-red-700 text-white text-center py-4 mt-10">
+    <p class="text-sm">Dhruv Prakash | All Rights Reserved</p>
+  </footer>
+ <!-- JS integrated for week3 -->
+  <script>
+    // Mobile Menu Toggle
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+    // Smooth Scrolling
+    document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        menu.classList.add("hidden");
+      });
+    });
+
+    // Add to Cart
+    const cartCount = document.getElementById('cart-count');
+    let count = 0;
+    document.querySelectorAll('.add-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        count++;
+        cartCount.textContent = count;
+        button.textContent = "Added!";
+        button.classList.add('bg-green-600');
+        setTimeout(() => {
+          button.textContent = "Add to Cart";
+          button.classList.remove('bg-green-600');
+        }, 1000);
+      });
+    });
+
+    // Scroll-to-top Button
+    const scrollBtn = document.getElementById("scroll-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) scrollBtn.classList.remove("hidden");
+      else scrollBtn.classList.add("hidden");
+    });
+    scrollBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Theme Toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("bg-gray-900");
+      document.body.classList.toggle("text-white");
+      themeToggle.textContent = document.body.classList.contains("bg-gray-900") ? "☀️" : "🌙";
+    });
+  </script>
+
+</body>
+</html>
